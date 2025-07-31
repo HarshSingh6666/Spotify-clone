@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Lamp styling */
+.lamp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.wire {
+  width: 2px;
+  height: 80px;
+  background-color: red;
+}
+
+.lamp {
+  width: 60px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Brightness slider */
+#brightness {
+  margin-top: 15px;
+  width: 150px;
+}
+
+/* Login Form Styling */
+.login-form {
+  width: 250px;
+  padding: 2em;
+  border-radius: 10px;
+  background: #663300;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  filter: brightness(50%);
+  text-align: left;
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #ED3C1A;
+  margin-bottom: 1.5em;
+  font-size: 1.5em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.5em;
+  background-color: #ED3C1A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #bf2c15;
+}

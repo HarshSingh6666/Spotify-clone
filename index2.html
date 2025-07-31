@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacker's Login</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Lamp Area -->
+    <div class="lamp-container">
+      <div class="wire"></div>
+      <div class="lamp"></div>
+      <input type="range" id="brightness" min="0" max="100" value="50" />
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form" id="formBox">
+      <h2>Welcome</h2>
+      <form onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      alert("Username: " + username + "\nPassword: " + password);
+    }
+
+    const brightnessSlider = document.getElementById("brightness");
+    const formBox = document.getElementById("formBox");
+
+    brightnessSlider.addEventListener("input", function () {
+      const value = this.value;
+      formBox.style.filter = `brightness(${value}%)`;
+    });
+  </script>
+</body>
+</html>
